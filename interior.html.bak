@@ -456,14 +456,14 @@ selector .swiper-container{
 				<div class="elementor-widget-container">
 					<div class="elementor-social-icons-wrapper elementor-grid">
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-shrink elementor-repeater-item-c0163ab" href="https://www.facebook.com/sheeptect.xyz" target="_blank">
-						<span class="elementor-screen-only">Facebook-f</span>
-						<i class="fab fa-facebook-f"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="mailto:bubcsi13@gmail.com" target="_blank">
+						<span class="elementor-screen-only">Mail</span>
+						<i class="far fa-envelope"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="https://www.instagram.com/sheeptect.xyzdesign_architecture/" target="_blank">
-						<span class="elementor-screen-only">Instagram</span>
-						<i class="fab fa-instagram"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="https://www.fiverr.com/gaborjuhasz923" target="_blank">
+						<span class="elementor-screen-only">Fiverr</span>
+						<i class="fas fa-briefcase"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
 					<a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-animation-shrink elementor-repeater-item-43cbad7" href="https://pin.it/28HelIC" target="_blank">
@@ -554,27 +554,22 @@ selector .swiper-container{
 				<div class="elementor-widget-container">
 					<div class="elementor-social-icons-wrapper elementor-grid">
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-cafc5ee" href="https://www.facebook.com/sheeptect.xyz" target="_blank">
-						<span class="elementor-screen-only">Facebook</span>
-						<i class="fab fa-facebook"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="mailto:bubcsi13@gmail.com" target="_blank">
+						<span class="elementor-screen-only">Mail</span>
+						<i class="far fa-envelope"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-2d02342" href="https://www.instagram.com/sheeptect.xyzdesign_architecture/" target="_blank">
-						<span class="elementor-screen-only">Instagram</span>
-						<i class="fab fa-instagram"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="https://www.fiverr.com/gaborjuhasz923" target="_blank">
+						<span class="elementor-screen-only">Fiverr</span>
+						<i class="fas fa-briefcase"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-c605ea4" href="https://www.youtube.com/" target="_blank">
-						<span class="elementor-screen-only">Youtube</span>
-						<i class="fab fa-youtube"></i>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-repeater-item-95a05ec" href="https://pin.it/28HelIC" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-animation-shrink elementor-repeater-item-43cbad7" href="https://pin.it/28HelIC" target="_blank">
 						<span class="elementor-screen-only">Pinterest</span>
 						<i class="fab fa-pinterest"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-26469ea" href="https://www.linkedin.com/in/gaborjuhasz13/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-shrink elementor-repeater-item-04aeba8" href="https://www.linkedin.com/in/gaborjuhasz13/" target="_blank">
 						<span class="elementor-screen-only">Linkedin</span>
 						<i class="fab fa-linkedin"></i>					</a>
 				</span>
@@ -617,27 +612,22 @@ selector .swiper-container{
 				<div class="elementor-widget-container">
 					<div class="elementor-social-icons-wrapper elementor-grid">
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-cafc5ee" href="https://www.facebook.com/sheeptect.xyz" target="_blank">
-						<span class="elementor-screen-only">Facebook</span>
-						<i class="fab fa-facebook"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="mailto:bubcsi13@gmail.com" target="_blank">
+						<span class="elementor-screen-only">Mail</span>
+						<i class="far fa-envelope"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-2d02342" href="https://www.instagram.com/sheeptect.xyzdesign_architecture/" target="_blank">
-						<span class="elementor-screen-only">Instagram</span>
-						<i class="fab fa-instagram"></i>					</a>
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-shrink elementor-repeater-item-63f86db" href="https://www.fiverr.com/gaborjuhasz923" target="_blank">
+						<span class="elementor-screen-only">Fiverr</span>
+						<i class="fas fa-briefcase"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-c605ea4" href="https://www.youtube.com/" target="_blank">
-						<span class="elementor-screen-only">Youtube</span>
-						<i class="fab fa-youtube"></i>					</a>
-				</span>
-							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-repeater-item-95a05ec" href="https://pin.it/28HelIC" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-pinterest elementor-animation-shrink elementor-repeater-item-43cbad7" href="https://pin.it/28HelIC" target="_blank">
 						<span class="elementor-screen-only">Pinterest</span>
 						<i class="fab fa-pinterest"></i>					</a>
 				</span>
 							<span class="elementor-grid-item">
-					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-26469ea" href="https://www.linkedin.com/in/gaborjuhasz13/" target="_blank">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-animation-shrink elementor-repeater-item-04aeba8" href="https://www.linkedin.com/in/gaborjuhasz13/" target="_blank">
 						<span class="elementor-screen-only">Linkedin</span>
 						<i class="fab fa-linkedin"></i>					</a>
 				</span>
