@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Your other HTML head elements -->
+    <style>
+      /* CSS Styles for the image viewer and mobile-friendly modifications */
+      .image-viewer-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .image-viewer-container {
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      .image-viewer-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        cursor: zoom-out;
+      }
+
+      body {
+        overflow: auto;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Responsive styles */
+      @media only screen and (max-width: 600px) {
+        .image-viewer-overlay {
+          background-color: rgba(0, 0, 0, 0.95);
+        }
+        
+        .image-viewer-container {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      /* Table styles */
+      .image-table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .image-table-row {
+        display: table-row;
+      }
+
+      .image-table-cell {
+        display: table-cell;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      
+      /* Close button styles */
+      .image-viewer-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        font-size: 20px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        z-index: 999;
+      }
+      
+      /* Love Letter styles */
+      .love-letter {
+        text-align: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+        color: #333;
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Your website content -->
+    
+    <div class="image-table">
+      <div class="image-table-row">
+        <div class="image-table-cell">
+          <img src="kep1.jpg" alt="Image 1" width="200" />
+        </div>
+        <div class="image-table-cell">
+          <img src="kep2.jpg" alt="Image 2" width="200" />
+        </div>
+      </div>
+      <div class="image-table-row">
+        <div class="image-table-cell">
+          <img src="kep3.jpg" alt="Image 3" width="200" />
+        </div>
+        <div class="image-table-cell">
+          <img src="kep4.jpg" alt="Image 4" width="200" />
+        </div>
+      </div>
+      <div class="image-table-row">
+        <div class="image-table-cell">
+          <img src="kep5.jpg" alt="Image 5" width="200" />
+        </div>
+      </div>
+      <div class="image-table-row">
+        <div class="image-table-cell" colspan="2">
+          <div class="love-letter">
+            <p>Szeretlek Liza!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="imageViewer.js"></script>
+  </body>
+</html>
