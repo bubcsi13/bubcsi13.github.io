@@ -1,0 +1,624 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide any overflow from the SVG */
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initial hidden position to the right */
+    width: 250px;
+    height: 100%;
+    background-color: #000;
+    transition: .5s;
+}
+
+.navigation.active {
+    right: 0; /* Slide in from the right when opened */
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    padding-top: 100px; /* Adjust for spacing */
+}
+
+.navigation ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 20px;
+    border-bottom: 1px solid #252525;
+}
+
+.bar {
+    background-color: #000; /* Set to black by default */
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger.open .bar {
+    background-color: #fff; /* Change to white when opened */
+}
+
+.hamburger.open #bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open #bar2 {
+    opacity: 0;
+}
+
+.hamburger.open #bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    .navigation {
+        width: 100%;
+        right: -100%; /* Initially hidden to the right for smaller screens */
+    }
+
+    .hamburger {
+        right: 10px;
+    }
+}
+
+/* Style the entire menu, including links */
+.navigation ul li {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 20px;
+    border: 1px solid #fff; /* Add a border around the links on all sides */
+    position: relative;
+}
+
+/* Style the anchor links to make them white */
+.navigation ul li a {
+    color: #fff; /* Make the links white */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 10px 20px; /* Add padding to the links */
+    display: inline-block; /* Make the links behave as blocks with padding */
+}
+
+/* Remove the underlines from links on hover */
+.navigation ul li a:hover {
+    text-decoration: none;
+}
+
+/* Style the "MENU" text */
+.menu-text {
+    position: absolute;
+    top: 0; /* Move the "MENU" text to the top of the menu */
+    left: 10px; /* Adjust the left position as needed */
+    transform: translateY(0); /* Reset the vertical translation */
+    color: #fff;
+    font-weight: bold;
+    padding: 20px; /* Add padding to the "MENU" text */
+}
+
+/* Adjust the positioning of the close button */
+.hamburger {
+    position: fixed;
+    
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+/* Add styles for the white strip */
+.strip {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Create a main flex container */
+.main-flex {
+    display: flex;
+    justify-content: space-between; /* Push content to the edges */
+    align-items: center; /* Vertically center the content */
+}
+
+/* Style the left part of the main flex */
+.left-part {
+    flex: 1; /* Take up available space */
+}
+
+/* Style the right part of the main flex */
+.right-part {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the strip text */
+.strip-text {
+    font-size: 18px;
+    color: #000; /* Text color for the strip */
+}
+
+/* Style the "LOG IN" button */
+.login-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+/*    display: flex;  Enable flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    height: 100%; /* Ensure button fills the strip vertically */
+}
+
+/* Adjust the positioning of the close button */
+.hamburger {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+.bar {
+    background-color: #000;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger.open .bar {
+    background-color: #fff;
+}
+
+/* Adjust the positioning of the SVG container */
+.svg-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Style the element under the strip */
+.under-strip {
+    position: relative;
+    width: 100%;
+    background-color: #fff; /* Background color to match the strip */
+}
+
+/* Style the SVG */
+.under-strip svg {
+    width: 100%;
+    height: auto;
+}
+
+.svg-container svg {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Ensure the SVG doesn't exceed its original height */
+}
+
+/* Style the text container */
+.text-container {
+    text-align: center;
+    padding: 20px; /* Add padding around the text */
+}
+
+/* Default styling for the button container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the "Register" button */
+.button {
+    width: 150px;
+    height: 100%;
+    padding: 10px 20px;
+    background: black;
+    border: 3px black solid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.88px;
+    word-wrap: break-word;
+}
+
+/* Style for the "LEARN MORE" text */
+.learn-more-text {
+    margin-top: 10px; /* Add some margin at the top of the "LEARN MORE" text */
+    color: black;
+    font-size: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    /* Reduce the margin at smaller screen sizes */
+    .learn-more-text {
+        margin-top: 5px;
+    }
+}
+
+.scrolling-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50px;
+            background-color: #B7FFEE;
+            color: black;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            font-family: 'CustomFont', sans-serif; /* Apply the custom font */
+        }
+
+        .scrolling-text {
+            white-space: nowrap;
+            font-weight: bold;
+            color: black;
+            font-size: 20px;
+        }
+
+/* Style the section container */
+.section {
+    display: flex;
+    justify-content: space-between; /* Adjust as needed */
+    align-items: center; /* Vertically center the content */
+    margin: 0px;
+	background-color: #F0C6FF;	/* Add some margin to separate it from other elements */
+	padding-bottom: 25px;
+	padding-top: 25px;
+}
+
+/* Style the left side part */
+.lefter-part {
+    flex: 1; /* Take up available space */
+}
+
+/* Style the image frame */
+.image-frame {
+   /* border: 3px solid black; /* Customize the frame appearance */
+    padding: 0px; /* Add padding to create space between the frame and image */
+    max-width: 100%; /* Ensure the image doesn't exceed the frame */
+}
+
+/* Style the image */
+.image {
+    max-width: 100%; /* Make sure the image fits within the frame */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Style the right side part */
+.righter-part {
+    flex: 1; /* Take up available space */
+}
+
+/* Style the text in the right side part */
+.section-text {
+    font-size: 18px;
+    color: black;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    word-wrap: break-word;
+    text-align: center; /* Center-align the text */
+}
+
+.logo-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap columns when the screen is narrow */
+	border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+.columnlogoimg {
+    flex: 1;
+    margin: 10px; /* Adjust the margin as needed for spacing */
+    text-align: center;
+}
+
+.column {
+    flex: 1;
+    margin: 10px; /* Adjust the margin as needed for spacing */
+    text-align: center;
+	padding-bottom: 45px;
+}
+
+
+
+.logo-svg {
+    width: 100px; /* Adjust the width of the SVG as needed */
+    height: auto;
+}
+
+.column-text {
+    margin-top: 10px; /* Adjust the margin as needed for spacing */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.timeline-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap columns when the screen is narrow */
+	/* border-top: 2px solid black; */
+    border-bottom: 2px solid black;
+	background-color: #B5FDEC;
+}
+
+.timeline-svg {
+    width: 100px; /* Adjust the width of the SVG as needed */
+    height: auto;
+}
+
+/* Style for the "2image2text" section */
+.2image2text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for rows */
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for columns */
+.column2 {
+    flex: 1;
+    padding: 0px; /* Adjust the padding as needed */
+	padding-top: 20px;
+}
+
+/* Style for text columns */
+.text-column {
+    background-color: #f0f0f0;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 50px;
+	padding-right: 50px;	/* Background color for text columns */
+}
+
+        /* Styles for the image viewer section */
+        .image-viewer-section {
+            background-color: #F0C6FF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            position: relative;
+        }
+
+        /* Style for the frame container */
+        .image-viewer-section .frame {
+            position: relative;
+            width: 60vw;
+            height: 60vh;
+        }
+
+        /* Style for the frame image */
+        .image-viewer-section .frame-image {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+			width: 100%; /* Increase the width to make it bigger */
+        /*    height: 100%; /* Increase the height to make it bigger */
+        /*    max-width: 100%; */
+        /*    max-height: 100%; */
+        }
+
+        /* Styles for the image viewer */
+        .image-viewer-section .image-viewer {
+            text-align: center;
+            position: absolute;
+            top: -87px;
+            left: 23px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Style for the viewable image */
+        .image-viewer-section .image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Styles for the navigation buttons */
+        .image-viewer-section .prev-button,
+        .image-viewer-section .next-button {
+            background-color: #fff0;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: calc(50% - 20px);
+            z-index: 2; /* Higher z-index for the buttons */
+        }
+
+        .image-viewer-section .prev-button {
+            left: 80px;
+			top: calc(50% + 30px); /* Move the next button 30px down */
+        }
+
+        .image-viewer-section .next-button {
+            right: 120px;
+			top: calc(50% + 30px); /* Move the next button 30px down */
+        }
+
+        /* Styles for the text content */
+        .image-viewer-section .text {
+            align-self: flex-start;
+            margin-bottom: 20px;
+            text-align: left;
+            text-align: justify;
+            padding-left: 100px;
+            padding-top: 40px;
+        }
+
+        /* Styles for the title, institution name, and location */
+        .image-viewer-section .title,
+        .image-viewer-section .institution,
+        .image-viewer-section .location {
+            color: black;
+            word-wrap: break-word;
+        }
+
+        .image-viewer-section .title {
+            font-size: 75px;
+            font-weight: 700;
+            padding-bottom: 25px;
+            line-height: 75px;
+            letter-spacing: 3.75px;
+        }
+
+        .image-viewer-section .institution {
+            padding-top: 45px;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: 1.25px;
+        }
+
+        .image-viewer-section .location {
+            padding-top: 10px;
+            font-size: 25px;
+            font-weight: 300;
+            letter-spacing: 1.25px;
+        }
+
+/* Style for the "3image3text" section */
+.3image3text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for rows */
+.rowA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Style for columns */
+.column3 {
+    flex: 1;
+    padding: 0px; /* Adjust the padding as needed */
+    padding-top: 20px;
+}
+
+/* Style for image columns */
+.image-columnA {
+    background-color: #f0f0f0;
+    padding-top: 100px; /* Adjust the padding as needed */
+    padding-bottom: 100px; /* Adjust the padding as needed */
+}
+
+/* Style for text columns */
+.text-columnA {
+    background-color: #f0f0f0;
+    padding: 20px; /* Adjust the padding as needed */
+}
+
+#pixel-image-sided-end {
+    background-color: #33FFA9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-left,
+.image-right {
+    
+}
+
+.image-left img,
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    flex: 2;
+    text-align: center;
+}
+
+
+
+button:hover {
+   /* background-color: #0056b3; */
+}
+
+#black-end-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 10px;
+}

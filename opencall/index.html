@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slide-Out Navigation</title>
+</head>
+<body>
+<div class="strip">
+    <div class="main-flex">
+        <div class="left-part">
+            <p class="strip-text">VIRTUAL CURATING</p>
+        </div>
+        <div class="right-part">
+            <button class="hamburger" onclick="show()">
+                <div id="bar1" class="bar"></div>
+                <div id="bar2" class="bar"></div>
+                <div id="bar3" class="bar"></div>
+            </button>
+            <button class="login-button">
+                <div style="width: 100%; height: 100%; background: black; border: 3px black solid">LOG IN</div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Add a new element directly under the white strip -->
+<div class="under-strip">
+    <!-- Embed the SVG inside the new element -->
+    <div class="svg-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 635" width="100%" height="635">
+            <image href="https://onlineviewingroom.com/open-call-hero/" width="1920" height="635" />
+        </svg>
+    </div>
+
+    <!-- Add the text under the SVG -->
+    <div class="text-container">
+        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 38px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 58px; word-wrap: break-word">Exploring women artists from Central and Eastern Europe</div>
+    </div>
+    
+    <!-- Add the button below the text -->
+    <div class="button-container">
+        <div style="width: 150px; height: 100%; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: black; border: 3px black solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+            <div style="text-align: center; color: white; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 2.88px; word-wrap: break-word">Register</div>
+        </div>
+		<div style="text-align: center; color: black; font-size: 15px; font-family: 'Space Grotesk', sans-serif; font-weight: 500; letter-spacing: 1px; padding-top: 10px; padding-bottom: 50px; word-wrap: break-word">LEARN MORE</div>
+    </div>
+</div>
+<div class="scrolling-text-container">
+        <marquee class="scrolling-text" scrollamount="10">Bora_Baboçi Alma_Bakiaj Lumturi_Blloshmi Valentina_Bonizzi Donika_Çina Yllka_Gjollesha Blerta_Hoçia Ledia_Kostandini Lori_Lako Iva_Lulashi Elsa_Martini Diana_Miziri Violana_Murataj Elsamina_Musiq Silvi_Naçi Matilda_Odobashi Flutura_Preka Edit_Pula Alketa_Ramaj Merita_Selimi Abi_Shehu Era_Tula Gerta_Xhaferaj Eli_Xoxa Xisha_Angelova Alena_Davidovich Zhanna_Gladko Janna_Grak Masha_Maroz Volha_Maslouskaya Vika_Mitrichenko Marina_Naprushkina Ulyana_Nevzorova Ludmila_Rusova Ala_Savashevich Nadya_Sayapina Olga_Sazykina Jana_Shostak Antonina_Slobodchikova Anna_Sokolova Tamara_Sokolova Olia_Sosnovskaya Varvara_Sudnik Masha_Svyatogor Galina_Vasilyeva Natalya_Zaloznaya Alesia_Zhitkevich Darina_Alster Alžběta_Bačíková Daniela_Baráčková Veronika_Šrek_Bromová Milena_Dopitová Marketa_Garai Isabela_Grosseová Dagmar_Hochová-Reinhardtová Anna_Hulačová Věra_Janoušková Libuše_Jarcovjáková Magdalena_Jetelová Ellen_Jilemnická Olga_Karlíková Barbora_Kleinhamplová Lenka_Klodová Eva_Kmentová Běla_Kolářová Kateřina_Konvalinová Alena_Kotzmannová Ester_Krumbachová Olga_Krykun Alena_Kučerová Magdalena_N._Kwiatkowska Viktorie_Langer Marie_Lukáčová Pavla_Malinová Adéla_Matasová Emila_Medková Lucie_Nováčková Kateřina_Olivová Markéta_Othová Pinkflamingos Míla_Preslová Miroslava_Ptáčková Hana_Puchová Alma_Lily_Rayner Lucie_Rosenfeldová Zorka_Ságlová Sráč_Sam Pavla_Sceranková Kateřina_Šedá Adriena_Šimotová Martina_Smutná Sláva_Sobotovičová Adéla_Součková Jana_Štěpánová StonyTellers Margita_Titlová_Ylovsky Marie_Tučková_(Ursula_Uwe) Aleksandra_Vajd Jitka_&_Květa_Válová Tereza_Velíková Lenka_Vítková Anna_Zemánková Anna_Ádám Lili_Agg Nikolett_Balázs Viktória_Balogh Emese_Benczúr Szilvia_Bolla Mária_Chilf Marianne_Csáky Márta_Czene Orshi_Drozdik Sári_Ember Ágnes_Eperjesi Krisztina_Erdei Erika_Fábián Andrea_Fajgerné_Dudás Viola_Fátyol Judit_Fischer Andi_Gáldi_Vinkó Kitti_Gosztola Andrea_Éva_Győri Katalin_Káldi Patrícia_Kaliczka Judit_Kele Zsófia_Keresztes Ilona_Keserü Judit_Kis Csilla_Klenyánszki Éva_Köves Katalin_Ladik Ilona_Lovas Luca_Lovász Éva_Magyarósi Mira_Makai Imre_Mariann Anna_Mark Judit_Lilla_Molnár Ágnes_Éva_Molnár Viktória_Monhor Kriszta_Nagy Hajnal_Németh Mara_Oláh_Omara Timea_Oravecz Katharina_Roters Andi_Schmied Judit_Flóra_Schuller Katarina_Šević Zsuzsanna_Simon Rita_Süveges Eszter_Szabó Eszter_Ágnes_Szabó Lilla_Szász Zsófia_Szemző Kamilla_Szíj Margit_Szilvitzky Henrietta_Szira Éva_Szombat Hajnalka_Tarr Kata_Tranker Dominika_Trapp Zsuzsi_Ujj Dorottya_Vékony Anna_Zilahi Magdalena_Abakanowicz Maria_Anto Yana_Bachynska Barbara_Bańda Zuzanna_Bartoszek Anna_Baumgart Beata_Ewa_Białecka Alicja_Bielawska Michalina_Bigaj Marianna_Bocian Dobrawa_Borkała Pamela_Bożek Karolina_Breguła Urszula_Broll Agnieszka_Brzeżańska Bogna_Burska Izabela_Chamczyk Magdalena_Ciemierkiewicz Ewa_Ciepielewska Agata_Cieślak Adelina_Cimochowicz Martyna_Czech Tatiana_Czekalska Alicja_Czyczel Iwona_Demko Monika_Drożyńska Kornelia_Dzikowska Karolina_Gembara Zuza_Golińska Małgorzata_Goliszewska Wanda_Gołkowska Katarzyna_Górna Justyna_Górowska Julia_Gryboś_&_Barbora_Zentková Barbara_Gryka Aneta_Grzeszykowska Bożena_Grzyb-Jarodzka Małgorzata_Gurowska Izabella_Gustowska Roma_Hałat Joanna_Helander Zuzanna_Hertzberg Marta_Hryniuk Ewa_Hubar Elżbieta_Jabłońska Karolina_Jabłońska Zuzanna_Janin Maria_Jarema Edka_Jarząb Katarzyna_Józefowicz Irena_Kalicka Agnieszka_Kalinowska Anna_Kalwajtys Kle_Mens Anna_Konik Dominika_Kowynia Barbara_Kozłowska Katarzyna_Kozyra Zofia_Krawiec Anna_Krenz Yulia_Krivich Marta_Krześlak Aleksandra_Kubiak Ewa_Kulesza Zofia_Kulik Agnieszka_Kurant Ewa_Kuryluk Agata_Kus Anna_Kutera Magdalena_N._Kwiatkowska Kolektyw_Łaski Magdalena_Łazarczyk Diana_Lelonek Natalia_LL Ewa_Łuczak Anna_Łuczak Goshka_Macuga Cecylia_Malik Joanna_Malinowska Honorata_Martin Agnieszka_Mastalerz Jadwiga_Maziarska Karolina_Mełnicka Olga_Micińska Gizela_Mickiewicz Martyna_Miller Małgorzata_Mirga-Tas Anna_Molska Magdalena_Moskwa Małgorzata_Mycek Dorota_Nieznalska Monika_Osiecka Ewa_Partum Maria_Pinińska-Bereś Joanna_Piotrowska Dorota_Podlaska Aleka_Polis Katarzyna_Przezwańska Joanna_Rajkowska Marta_Romankiv Katarzyna_Rotkiewicz-Szumska Irmina_Rusicka Zofia_Rydet Ala_Savashevich Jadwiga_Sawicka Jana_Shostak Anna_Siekierska Aleksandra_Ska Kama_Sokolnicka Irmina_Staś Maria_Stokłosa Jadwiga_Subczyńska Alina_Szapocznikow Iza_Tarasewicz Małgorzata_Turewicz-Lafranchi Teresa_Tyszkiewicz Ewelina_Węgiel Karolina_Wiktor Ania_Witkowska Jaśmina_Wójcik Zorka_Wollny Bożna_Wydrowska Alicja_Wysocka Weronika_Wysocka Weronika_Zalewska Anna_Zaradny Ewa_Zarzycka Agata_Zbylut Liliana_Zeic Marta_Ziółek Sanja_Anđelković Mira_Brtka Zorica_Čolić Dubravka_Đurić Marianna_Feher_Nikolić Isidora_Ilić Ivana_Ivković Olga_Jančić Aleksandra_Saša_Jeremić Olga_Jevrić Jelena_Jureša Ana_Knežević Bojana_Knežević Neda_Kovinić Milena_Maksimović Marina_Marković Goranka_Matić Jelena_Micić Jelena_Mijić Mima_Orlović Andrea_Palašti Sunčica_Pasuljević_Kandić Anastasija_Pavić Vesna_Pavlović Darinka_Pop-Mitić Darija_S._Radaković Marica_Radojčić Jelica_Radovanović Rena_Raedle Milica_Rakić Vahida_Ramujkić Ivana_Smiljanić Jasmina_Tešanović Milica_Tomić Anja_Tončić Jelena_Trpković Adrienn_Újhazi Vesna_Vesić Dragana_Žarevac Katarina_Zdjelar Mária_Balážová Mária_Bartuszová Leontina_Berková Martinka_Bobrikova Klára_Bočkayová Nikola_Čemanová Anetta_Mona_Chişa_&_Lucia_Tkáčová Martina_Chudá Pavlína_Fichta_Čierna Lucia_Dovičáková Žofia_Dubová Květoslava_Fulierová Julia_Gryboś_&_Barbora_Zentková Gabriela_Halás Milota_Havránková Andrea_Kalinová Jana_Kapelová Rita_Koszorús Viera_Kraicová Daniela_Krajčová Monika_Kubinská Kundy_Crew Ema_Lančaričová Denisa_Lehocká Paula_Malinowska Tamara_Moyzes Ilona_Németh Kvet_Nguyen Kristína_Országhová Renáta_Pintérová Katarína_Poliačiková Zuzana_Pustaiová Emília_Rigová Ivana_Šáteková Ľubomíra_Sekerášová Ester_Šimerová-Martinčeková Eva_Škrovinová Marika_Smreková Maja_Štefančíková Zuzana_Svatík Lucie_Svoboda_Mičíková Lucia_Tallová Dana_Tomečková Jana_Želibská Alina_Kleytman AntiGonna Jan_Bačynsjkyi Tereza_Barabash Natalia_Bazylevych Yevgenia_Belorusets Oksana_Briukhovetska Uliana_Bychenkova Yana_Bystrova Oksana_Chepelyk Olia_Fedorova Taia_Galagan Ksenia_Hnylytska_and_Alina_Yakubenko Natalia_Golibroda-Boyko Uli_Golub Alena_Grom Alla_Horska Zhanna_Kadyrova Alevtina_Kakhidze Olga_Kashymbekova Dana_Kavelina_ Oksana_Kazmina Lesia_Khomenko Alina_Kopytsіa Tetiana_Kornieieva Yulia_Kostereva Yulia_Krivich Iryna_Kudria Maria_Kulikovska Dariia_Kuzmych Olha_Kuzyura Katya_Lesiv Kateryna_Lysovenko Olan_Mamay Anna_Manankina Lada_Nakonechna Irina_Pap Valentyna_Petrova Vlada_Ralko Marta_Romankiv Ada_Rybachuk Halyna_Sevruk Anna_Shcherbyna Anna_Sorokovaya Olena_Subach Valeria_Troubina Tetyana_Yablonska Kateryna_Yermolayeva Anna_Zvyagintseva Lirije_Buliqi Laureta_Hajrullahu Majlinda_Hoxha Doruntina_Kastrati Lala_Meredith-Vula Zake_Prelvukaj Barbara_Prenka Miradije_Ramiqi Kaltrinë_Rrustemi Fitore_Isufi_Shukriu-Koja Agrina_Vllasaliu Alije_Vokshi Alketa_Xhafa_Mripa Rudina_Xhaferi Valbona_Zherka</marquee>
+    </div>
+<!-- Add a new section with two parts -->
+<div class="section">
+    <!-- Left side part with an image and frame -->
+    <div class="lefter-part">
+        <!-- Special frame around the image -->
+        <div class="image-frame">
+            <img src="upper-first-framed-image-a.png" alt="Image" class="image">
+        </div>
+    </div>
+
+<!-- Right side part with text -->
+<div class="righter-part" style="padding-left: 20px; padding-right: 20px;">
+    <div style="width: 100%; color: black; font-size: 45px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 45px; letter-spacing: 3.75px; word-wrap: break-word">OPEN CALL FOR VIRTUAL CURATING</div>
+
+    <div style="width: 100%">
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; letter-spacing: 1.10px; word-wrap: break-word">We believe that </span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.10px; word-wrap: break-word">women artists from the Central and Eastern European (CEE) region</span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; letter-spacing: 1.10px; word-wrap: break-word"> are underrepresented in the global art scene and deserve more recognition from institutions and audiences than they currently receive. <br/>The </span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.10px; word-wrap: break-word">Open Call for Virtual Curating</span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; letter-spacing: 1.10px; word-wrap: break-word"> aims to support women artists from the CEE region by inviting curators and institutions to engage with their oeuvres featured in the database of the </span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.10px; word-wrap: break-word">Secondary Archive</span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; letter-spacing: 1.10px; word-wrap: break-word">. In this project, members of the </span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.10px; word-wrap: break-word">International Association of Curators of Contemporary Art (IKT)</span>
+        <span style="color: black; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 400; letter-spacing: 1.10px; word-wrap: break-word"> are invited to organize virtual exhibitions for the Secondary Archive's artists.</span>
+    </div>
+</div>
+</div>
+<div class="logo-text-container">
+    <div class="columnlogoimg">
+        <img class="logo-svg" src="https://onlineviewingroom.com/walters-cube-logo-vector/" alt="Column 1 SVG" style="width:210px;">
+    </div>
+    
+    <div class="columnlogoimg">
+        <img class="logo-svg" src="https://onlineviewingroom.com/ikt/" alt="Column 2 SVG">
+    </div>
+
+    <div class="columnlogoimg">
+        <img class="logo-svg" src="https://onlineviewingroom.com/secondary-archive-vector-437/" alt="Column 3 SVG" style="width:210px;">
+    </div>
+</div>
+
+
+
+
+
+<div class="timeline-section">
+    <!-- Add your SVG here -->
+    <div class="svg-container">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 500" width="100%" height="100%" style="padding-right: 25px; padding-left: 25px;">
+            <image href="https://onlineviewingroom.com/group-40-desktop/" width="1920" height="500" />
+        </svg>
+    </div>
+
+    <div class="column">
+        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">SEPT/15/2023</div>
+        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">ANNOUNCING THE OPEN CALL</div>
+    </div>
+
+    <div class="column">
+        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">NOV/15/2023</div>
+        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">DEADLINE FOR SUBMISSIONS</div>
+    </div>
+
+    <div class="column">
+        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">JAN/15/2024</div>
+        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; text-transform: uppercase; letter-spacing: 1.25px; word-wrap: break-word">notification of selection results</div>
+    </div>
+
+    <div class="column">
+        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">FEB-MAR/2024</div>
+        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">ONLINE OPENING AND EVENTS</div>
+    </div>
+</div>
+
+<!-- Add a new section named "2image2text" -->
+<div class="2image2text">
+    <!-- First Row -->
+    <div class="row">
+        <!-- First Column (Text) -->
+        <div class="column text-column">
+            <div style="color: black; font-size: 25px; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">About the Open Call //</div>
+			<div style="width: 100%; color: black; font-size: 75px; font-weight: 700; line-height: 75px; letter-spacing: 3.75px; word-wrap: break-word">OVERVIEW</div>
+			<div style="width: 100%; height: 100%"><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">The </span><span style="color: black; font-size: 25px; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">Open Call</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> for Virtual Curating offers an opportunity for </span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">IKT</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> </span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">member
+curators</span><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> to explore the possibilities of organizing exhibitions in the digital
+realm. Curators are invited to experiment with the format of virtual 3D
+exhibitions and create their projects in the digital twin spaces of leading art
+institutions supported by cutting-edge </span><span style="color: black; font-size: 25px; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">Walter’s Cube</span><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> technology and its
+Virtual Curating platform. The winners will be awarded an </span><span style="color: black; font-size: 25px; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">$800 prize</span><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> (one
+per host institution), and their exhibitions will be published and promoted
+through the organizers’ and host institutions’ social media networks.</span></div>
+        </div>
+
+        <!-- Second Column (Image) -->
+        <div class="column2 image-column">
+            <img src="https://onlineviewingroom.com/sample-to-cage-2image2texta/" alt="Image 1">
+        </div>
+    </div>
+
+    <!-- Second Row -->
+    <div class="row">
+        <!-- First Column (Image) -->
+        <div class="column2 image-column">
+            <img src="https://onlineviewingroom.com/sample-to-cage-2image2textb/" alt="Image 2">
+        </div>
+
+        <!-- Second Column (Text) -->
+        <div class="column text-column">
+            <div style="color: black; font-size: 25px; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">About the Open Call //</div>
+			<div style="width: 100%; color: black; font-size: 75px; font-weight: 700; line-height: 75px; letter-spacing: 3.75px; word-wrap: break-word">GOAL</div>
+			<div style="width: 100%; height: 100%"><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">The Open Call aims to promote the integration and rediscovery of post-war
+and contemporary CEE women artists through the exploration of the
+</span><span style="color: black; font-size: 25px; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">Secondary Archive</span><span style="color: black; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> – a digital platform featuring artists from the CEE region
+(Albania, Belarus, Czech Republic, Hungary, Kosovo, Poland, Serbia, Slovakia,
+and Ukraine). Curators, scholars, and academic researchers are encouraged
+to explore the digital archive and contact artists highlighted on the platform
+during their preparation process. The final exhibition proposals should
+include at least one artist from the Secondary Archive’s platform.</span></div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="image-viewer-section">
+        <div class="text">
+            <div class="title">HOST<br>INSTITUTIONS</div>
+            <div style="width: 50%; color: black; font-size: 22px; font-weight: 400; padding-bottom: 25px; letter-spacing: 1.10px; word-wrap: break-word">The virtual host institutions offered their digital twin spaces for the applicants to virtually realize their curatorial concepts with the help of Walter’s Cube Editor software. Take a look around and choose the proper venue for your ideas!</div>
+        </div>
+        <div class="frame">
+            <img src="./kepkeret.png" alt="Frame" class="frame-image">
+            <div class="image-viewer">
+                <img src="https://onlineviewingroom.com/image-viewer-default-rectangle-12/" alt="Image 1" class="image">
+            </div>
+        </div>
+        <div class="prev-button" onclick="prevImage()">
+            <img src="https://onlineviewingroom.com/left-button-chevron-icon/" alt="Previous">
+        </div>
+        <div class="next-button" onclick="nextImage()">
+            <img src="https://onlineviewingroom.com/right-button-chevron-icon/" alt="Next">
+        </div>
+        <div class="institution">
+            <span style="padding-top: 45px; font-size: 25px; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">MOSTYN<br></span>
+            <span style="padding-top: 10px; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">Wales</span>
+        </div>
+    </div>
+
+
+
+
+<div class="3image3text">
+    <!-- First Row -->
+    <div class="rowA">
+        <!-- First Column (Image) -->
+        <div class="column3 image-columnA">
+            <img src="group 45.png" alt="Image 1">
+        </div>
+        <!-- Second Column (Text) -->
+        <div class="column3 text-columnA">
+            <div style="width: 100%; height: 100%; position: relative">
+    <div style="width: 27px; height: 521px; left: 2px; top: 272px; position: absolute">
+        <div style="width: 27px; height: 3px; left: 0px; top: 3px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 77px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 225px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 331px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 183px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 373px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 447px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 521px; position: absolute; background: black; border: 1px solid"></div>
+    </div>
+    <div style="width: 594px; left: 0px; top: 242px; position: absolute; color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; word-wrap: break-word">Register as an active IKT member or start working with one if you are not yet.<br/>Select the artists from the Secondary Archive platform you would like to include in your exhibition. <br/>Conceive your curatorial concept. <br/>Get in touch with the chosen artists, estate or gallery directly or through the Secondary Archive.<br/>Select digital twin space from the list. <br/>Collect hi-res reproductions or filling out a request form for any 3D object digitization. <br/>Install your exhibition in the digital twin space via Walter’s Cube Editor software. <br/>Submit your finalized exhibition via our submission platform.</div>
+    <div style="width: 589px; left: 0px; top: 57px; position: absolute; color: black; font-size: 75px; font-family: Space Grotesk; font-weight: 700; line-height: 75px; letter-spacing: 3.75px; word-wrap: break-word">APPLICATION PROCESS</div>
+    <div style="left: 0px; top: 0px; position: absolute; color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">About the Open Call //</div>
+</div>
+        </div>
+    </div>
+    
+    <!-- Second Row -->
+    <div class="rowA">
+        <!-- First Column (Text) -->
+        <div class="column3 text-columnA">
+            <div style="width: 100%; height: 100%; position: relative">
+    <div style="width: 610px; left: 0px; top: 248px; position: absolute"><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; word-wrap: break-word">The internal team of Walter’s Cube will screen submissions to determine whether they meet the open call requirements. <br/>A </span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; word-wrap: break-word">selection committee</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; word-wrap: break-word"> consisting of representatives from IKT (1 pers.), the Secondary Archive (1 pers.), Walter’s Cube (2 pers.), and the host institutions (1 pers. each.) will review submissions and select one winner per host institution. Winning exhibitions will be published and promoted by the host institutions as well as the organizers. <br/>A </span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; word-wrap: break-word">shortlist</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; word-wrap: break-word"> of exhibitions will be created for each institution, to be published and promoted on the partners’ websites and social media platforms.</span></div>
+    <div style="width: 27px; height: 375px; left: 2px; top: 278px; position: absolute">
+        <div style="width: 27px; height: 3px; left: 0px; top: 3px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 109px; position: absolute; background: black; border: 1px solid"></div>
+        <div style="width: 27px; height: 3px; left: 0px; top: 375px; position: absolute; background: black; border: 1px solid"></div>
+    </div>
+    <div style="width: 710px; height: 156px; left: 0px; top: 57px; position: absolute; color: black; font-size: 75px; font-family: Space Grotesk; font-weight: 700; line-height: 75px; letter-spacing: 3.75px; word-wrap: break-word">Evaluation   process</div>
+    <div style="width: 610px; left: 0px; top: 0px; position: absolute; color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">About the Open Call //</div>
+</div>
+        </div>
+        <!-- Second Column (Image) -->
+        <div class="column3 image-columnA">
+            <img src="evaluation-pic.png" alt="Image 2">
+        </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="rowA">
+        <!-- First Column (Image) -->
+        <div class="column3 image-columnA">
+            <img src="key-info-pic.png" alt="Image 3">
+        </div>
+        <!-- Second Column (Text) -->
+        <div class="column3 text-columnA">
+            <div style="width: 100%; height: 100%; position: relative">
+    <div style="width: 588px; left: 0px; top: 242px; position: absolute"><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; word-wrap: break-word">Call:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; word-wrap: break-word"> </span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; word-wrap: break-word">Open Call for Virtual Curating – Exploring Women Artists from Central &
+  Eastern Europe.<br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Eligibility:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> IKT members only. Curatorial teams must include at least one IKT
+  member.
+  <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Location:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> Exclusively online
+  <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Submission deadline:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> 15 November 2023    12.00 pm. CET
+  <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Submission requirements:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">- Link of the virtual exhibition, completed       via  the WsC website
+   - Curatorial statement (define max. word       count and format + way of
+  uploading)
+   - CV (determine requirements for team         applications)<br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Number of applications</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; letter-spacing: 1.25px; word-wrap: break-word">:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> One applicant can submit multiple exhibitions , but
+  only one project per host institution.
+  <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Application fee:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> Free
+  <br/></span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 500; text-decoration: underline; letter-spacing: 1.25px; word-wrap: break-word">Prize:</span><span style="color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word"> $800 per host institution</span></div>
+    <div style="width: 580px; left: 8px; top: 57px; position: absolute; color: black; font-size: 75px; font-family: Space Grotesk; font-weight: 700; line-height: 75px; letter-spacing: 3.75px; word-wrap: break-word">KEY    INFORMATION</div>
+    <div style="width: 807px; left: 8px; top: 0px; position: absolute; color: black; font-size: 25px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">About the Open Call //</div>
+</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="scrolling-text-container">
+        <marquee class="scrolling-text" scrollamount="10">Bora_Baboçi Alma_Bakiaj Lumturi_Blloshmi Valentina_Bonizzi Donika_Çina Yllka_Gjollesha Blerta_Hoçia Ledia_Kostandini Lori_Lako Iva_Lulashi Elsa_Martini Diana_Miziri Violana_Murataj Elsamina_Musiq Silvi_Naçi Matilda_Odobashi Flutura_Preka Edit_Pula Alketa_Ramaj Merita_Selimi Abi_Shehu Era_Tula Gerta_Xhaferaj Eli_Xoxa Xisha_Angelova Alena_Davidovich Zhanna_Gladko Janna_Grak Masha_Maroz Volha_Maslouskaya Vika_Mitrichenko Marina_Naprushkina Ulyana_Nevzorova Ludmila_Rusova Ala_Savashevich Nadya_Sayapina Olga_Sazykina Jana_Shostak Antonina_Slobodchikova Anna_Sokolova Tamara_Sokolova Olia_Sosnovskaya Varvara_Sudnik Masha_Svyatogor Galina_Vasilyeva Natalya_Zaloznaya Alesia_Zhitkevich Darina_Alster Alžběta_Bačíková Daniela_Baráčková Veronika_Šrek_Bromová Milena_Dopitová Marketa_Garai Isabela_Grosseová Dagmar_Hochová-Reinhardtová Anna_Hulačová Věra_Janoušková Libuše_Jarcovjáková Magdalena_Jetelová Ellen_Jilemnická Olga_Karlíková Barbora_Kleinhamplová Lenka_Klodová Eva_Kmentová Běla_Kolářová Kateřina_Konvalinová Alena_Kotzmannová Ester_Krumbachová Olga_Krykun Alena_Kučerová Magdalena_N._Kwiatkowska Viktorie_Langer Marie_Lukáčová Pavla_Malinová Adéla_Matasová Emila_Medková Lucie_Nováčková Kateřina_Olivová Markéta_Othová Pinkflamingos Míla_Preslová Miroslava_Ptáčková Hana_Puchová Alma_Lily_Rayner Lucie_Rosenfeldová Zorka_Ságlová Sráč_Sam Pavla_Sceranková Kateřina_Šedá Adriena_Šimotová Martina_Smutná Sláva_Sobotovičová Adéla_Součková Jana_Štěpánová StonyTellers Margita_Titlová_Ylovsky Marie_Tučková_(Ursula_Uwe) Aleksandra_Vajd Jitka_&_Květa_Válová Tereza_Velíková Lenka_Vítková Anna_Zemánková Anna_Ádám Lili_Agg Nikolett_Balázs Viktória_Balogh Emese_Benczúr Szilvia_Bolla Mária_Chilf Marianne_Csáky Márta_Czene Orshi_Drozdik Sári_Ember Ágnes_Eperjesi Krisztina_Erdei Erika_Fábián Andrea_Fajgerné_Dudás Viola_Fátyol Judit_Fischer Andi_Gáldi_Vinkó Kitti_Gosztola Andrea_Éva_Győri Katalin_Káldi Patrícia_Kaliczka Judit_Kele Zsófia_Keresztes Ilona_Keserü Judit_Kis Csilla_Klenyánszki Éva_Köves Katalin_Ladik Ilona_Lovas Luca_Lovász Éva_Magyarósi Mira_Makai Imre_Mariann Anna_Mark Judit_Lilla_Molnár Ágnes_Éva_Molnár Viktória_Monhor Kriszta_Nagy Hajnal_Németh Mara_Oláh_Omara Timea_Oravecz Katharina_Roters Andi_Schmied Judit_Flóra_Schuller Katarina_Šević Zsuzsanna_Simon Rita_Süveges Eszter_Szabó Eszter_Ágnes_Szabó Lilla_Szász Zsófia_Szemző Kamilla_Szíj Margit_Szilvitzky Henrietta_Szira Éva_Szombat Hajnalka_Tarr Kata_Tranker Dominika_Trapp Zsuzsi_Ujj Dorottya_Vékony Anna_Zilahi Magdalena_Abakanowicz Maria_Anto Yana_Bachynska Barbara_Bańda Zuzanna_Bartoszek Anna_Baumgart Beata_Ewa_Białecka Alicja_Bielawska Michalina_Bigaj Marianna_Bocian Dobrawa_Borkała Pamela_Bożek Karolina_Breguła Urszula_Broll Agnieszka_Brzeżańska Bogna_Burska Izabela_Chamczyk Magdalena_Ciemierkiewicz Ewa_Ciepielewska Agata_Cieślak Adelina_Cimochowicz Martyna_Czech Tatiana_Czekalska Alicja_Czyczel Iwona_Demko Monika_Drożyńska Kornelia_Dzikowska Karolina_Gembara Zuza_Golińska Małgorzata_Goliszewska Wanda_Gołkowska Katarzyna_Górna Justyna_Górowska Julia_Gryboś_&_Barbora_Zentková Barbara_Gryka Aneta_Grzeszykowska Bożena_Grzyb-Jarodzka Małgorzata_Gurowska Izabella_Gustowska Roma_Hałat Joanna_Helander Zuzanna_Hertzberg Marta_Hryniuk Ewa_Hubar Elżbieta_Jabłońska Karolina_Jabłońska Zuzanna_Janin Maria_Jarema Edka_Jarząb Katarzyna_Józefowicz Irena_Kalicka Agnieszka_Kalinowska Anna_Kalwajtys Kle_Mens Anna_Konik Dominika_Kowynia Barbara_Kozłowska Katarzyna_Kozyra Zofia_Krawiec Anna_Krenz Yulia_Krivich Marta_Krześlak Aleksandra_Kubiak Ewa_Kulesza Zofia_Kulik Agnieszka_Kurant Ewa_Kuryluk Agata_Kus Anna_Kutera Magdalena_N._Kwiatkowska Kolektyw_Łaski Magdalena_Łazarczyk Diana_Lelonek Natalia_LL Ewa_Łuczak Anna_Łuczak Goshka_Macuga Cecylia_Malik Joanna_Malinowska Honorata_Martin Agnieszka_Mastalerz Jadwiga_Maziarska Karolina_Mełnicka Olga_Micińska Gizela_Mickiewicz Martyna_Miller Małgorzata_Mirga-Tas Anna_Molska Magdalena_Moskwa Małgorzata_Mycek Dorota_Nieznalska Monika_Osiecka Ewa_Partum Maria_Pinińska-Bereś Joanna_Piotrowska Dorota_Podlaska Aleka_Polis Katarzyna_Przezwańska Joanna_Rajkowska Marta_Romankiv Katarzyna_Rotkiewicz-Szumska Irmina_Rusicka Zofia_Rydet Ala_Savashevich Jadwiga_Sawicka Jana_Shostak Anna_Siekierska Aleksandra_Ska Kama_Sokolnicka Irmina_Staś Maria_Stokłosa Jadwiga_Subczyńska Alina_Szapocznikow Iza_Tarasewicz Małgorzata_Turewicz-Lafranchi Teresa_Tyszkiewicz Ewelina_Węgiel Karolina_Wiktor Ania_Witkowska Jaśmina_Wójcik Zorka_Wollny Bożna_Wydrowska Alicja_Wysocka Weronika_Wysocka Weronika_Zalewska Anna_Zaradny Ewa_Zarzycka Agata_Zbylut Liliana_Zeic Marta_Ziółek Sanja_Anđelković Mira_Brtka Zorica_Čolić Dubravka_Đurić Marianna_Feher_Nikolić Isidora_Ilić Ivana_Ivković Olga_Jančić Aleksandra_Saša_Jeremić Olga_Jevrić Jelena_Jureša Ana_Knežević Bojana_Knežević Neda_Kovinić Milena_Maksimović Marina_Marković Goranka_Matić Jelena_Micić Jelena_Mijić Mima_Orlović Andrea_Palašti Sunčica_Pasuljević_Kandić Anastasija_Pavić Vesna_Pavlović Darinka_Pop-Mitić Darija_S._Radaković Marica_Radojčić Jelica_Radovanović Rena_Raedle Milica_Rakić Vahida_Ramujkić Ivana_Smiljanić Jasmina_Tešanović Milica_Tomić Anja_Tončić Jelena_Trpković Adrienn_Újhazi Vesna_Vesić Dragana_Žarevac Katarina_Zdjelar Mária_Balážová Mária_Bartuszová Leontina_Berková Martinka_Bobrikova Klára_Bočkayová Nikola_Čemanová Anetta_Mona_Chişa_&_Lucia_Tkáčová Martina_Chudá Pavlína_Fichta_Čierna Lucia_Dovičáková Žofia_Dubová Květoslava_Fulierová Julia_Gryboś_&_Barbora_Zentková Gabriela_Halás Milota_Havránková Andrea_Kalinová Jana_Kapelová Rita_Koszorús Viera_Kraicová Daniela_Krajčová Monika_Kubinská Kundy_Crew Ema_Lančaričová Denisa_Lehocká Paula_Malinowska Tamara_Moyzes Ilona_Németh Kvet_Nguyen Kristína_Országhová Renáta_Pintérová Katarína_Poliačiková Zuzana_Pustaiová Emília_Rigová Ivana_Šáteková Ľubomíra_Sekerášová Ester_Šimerová-Martinčeková Eva_Škrovinová Marika_Smreková Maja_Štefančíková Zuzana_Svatík Lucie_Svoboda_Mičíková Lucia_Tallová Dana_Tomečková Jana_Želibská Alina_Kleytman AntiGonna Jan_Bačynsjkyi Tereza_Barabash Natalia_Bazylevych Yevgenia_Belorusets Oksana_Briukhovetska Uliana_Bychenkova Yana_Bystrova Oksana_Chepelyk Olia_Fedorova Taia_Galagan Ksenia_Hnylytska_and_Alina_Yakubenko Natalia_Golibroda-Boyko Uli_Golub Alena_Grom Alla_Horska Zhanna_Kadyrova Alevtina_Kakhidze Olga_Kashymbekova Dana_Kavelina_ Oksana_Kazmina Lesia_Khomenko Alina_Kopytsіa Tetiana_Kornieieva Yulia_Kostereva Yulia_Krivich Iryna_Kudria Maria_Kulikovska Dariia_Kuzmych Olha_Kuzyura Katya_Lesiv Kateryna_Lysovenko Olan_Mamay Anna_Manankina Lada_Nakonechna Irina_Pap Valentyna_Petrova Vlada_Ralko Marta_Romankiv Ada_Rybachuk Halyna_Sevruk Anna_Shcherbyna Anna_Sorokovaya Olena_Subach Valeria_Troubina Tetyana_Yablonska Kateryna_Yermolayeva Anna_Zvyagintseva Lirije_Buliqi Laureta_Hajrullahu Majlinda_Hoxha Doruntina_Kastrati Lala_Meredith-Vula Zake_Prelvukaj Barbara_Prenka Miradije_Ramiqi Kaltrinë_Rrustemi Fitore_Isufi_Shukriu-Koja Agrina_Vllasaliu Alije_Vokshi Alketa_Xhafa_Mripa Rudina_Xhaferi Valbona_Zherka</marquee>
+    </div>
+	
+	
+	
+	
+	
+	
+<div id="pixel-image-sided-end">
+    <div class="image-left">
+        <img src="lenti pixel bal.png" alt="Image Left" style="padding-bottom: 25px; padding-top: 25px;">
+    </div>
+<div class="button-container">
+        <div style="width: 150px; height: 100%; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background: black; border: 3px black solid; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
+            <div style="text-align: center; color: white; font-size: 22px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 2.88px; word-wrap: break-word">Register</div>
+        </div>
+		<div style="text-align: center; color: black; font-size: 15px; font-family: 'Space Grotesk', sans-serif; font-weight: 500; letter-spacing: 1px; padding-top: 10px; padding-bottom: 50px; word-wrap: break-word">BACK TO TOP</div>
+    </div>
+    <div class="image-right">
+        <img src="lenti pixel jobb.png" alt="Image Right" style="padding-top: 25px;">
+    </div>
+</div>
+
+	<div id="black-end-section">
+    <div class="text">
+        
+    </div>
+	<div style="width: 100%; height: 100%; text-align: center; color: white; font-size: 32px; font-weight: 500; word-wrap: break-word; padding-bottom: 30px;">VIRTUAL CURATING</div>
+	<div style="text-align: center"><span style="color: white; font-size: 20px; font-weight: 300; letter-spacing: 1px; word-wrap: break-word">2023 Virtual Curating </span><span style="color: white; font-size: 20px; font-weight: 300; text-decoration: underline; letter-spacing: 1px; word-wrap: break-word">Powered by Walter’s Cube</span><span style="color: white; font-size: 20px; font-weight: 300; letter-spacing: 1px; word-wrap: break-word"> | All Rights Reserved | 354 Bowery New York, NY 10003 | hello@walterscube.com</span></div>
+</div>
+
+	
+
+
+
+    <!-- Move the "MENU" text inside the navigation menu -->
+    <nav class="navigation">
+        <div class="menu-text">MENU</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>
