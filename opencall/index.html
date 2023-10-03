@@ -4,16 +4,749 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap">
 
-    <title>Slide-Out Navigation</title>
+    <title>Virtual Curating</title>
 </head>
 <body>
+    <style>
+	/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.content {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove borders */
+}
+
+.content2 {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove borders */
+}
+
+.content3 {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove borders */
+	background-color: #F0C6FF;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; /* Align text column to the end */
+    margin-bottom: 0px;
+}
+
+.row2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; /* Align text column to the start */
+    margin-bottom: 0px;
+}
+
+/* Remove margin and padding for all columns */
+.column {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove margin and padding for all images */
+img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Additionally, you can remove any remaining spacing around the first image column */
+.column.image:first-child {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+/* Style for the box around <p> elements */
+.text-box {
+    text-align: left;
+    padding: 20px; /* Add space for text */
+    font-family: 'Space Grotesk', sans-serif; /* Apply Space Grotesk font */
+    font-size: 14px; /* Initial font size */
+    border: 2px solid #ffffff00; /* Add a border */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    margin: 20px; /* Add space around the box */
+}
+
+h1 {
+    color: black;
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    line-height: 5vw; /* Responsive line height based on viewport width */
+    letter-spacing: 0.25vw; /* Responsive letter spacing based on viewport width */
+    word-wrap: break-word;
+}
+
+h2 {
+    color: black;
+    font-size: 2vw; /* Responsive font size based on viewport width */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1vw; /* Responsive letter spacing based on viewport width */
+    word-wrap: break-word;
+}
+
+p {
+    color: black;
+    font-size: 2vw; /* Responsive font size based on viewport width */
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1vw; /* Responsive letter spacing based on viewport width */
+    word-wrap: break-word;
+}
+
+.image img {
+    max-width: 100vw; /* Set the maximum width of the image to 100% of the viewport width */
+    max-height: 100vh; /* Set the maximum height of the image to 100% of the viewport height */
+    height: auto;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Media query for mobile view */
+@media screen and (max-width: 1265px) {
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end; /* Align text column to the end */
+        margin-bottom: 0px;
+    }
+
+    .row2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start; /* Align text column to the start */
+        margin-bottom: 0px;
+    }
+
+    .image img {
+        max-width: 80vw; /* Set the maximum width of the image to 80% of the viewport width */
+        max-height: 50vh; /* Set the maximum height of the image to 50% of the viewport height */
+        height: auto;
+    }
+
+    /* Additional media query for smaller screens (adjust max-width as needed) */
+    @media screen and (max-width: 820px) {
+        .row {
+            flex-direction: column; /* Stack elements vertically */
+            align-items: flex-end; /* Align elements to the start */
+        }
+
+        .row2 {
+            flex-direction: column; /* Stack elements vertically */
+            align-items: flex-start; /* Align elements to the start */
+        }
+
+        .column.text {
+            text-align: left; /* Align text to the left */
+        }
+    }
+	.image img {
+    max-width: 100vw; /* Set the maximum width of the image to 100% of the viewport width */
+    max-height: 100vh; /* Set the maximum height of the image to 100% of the viewport height */
+    height: auto;
+	min-width: 150px;
+}
+    
+    /* Include the provided code for mobile view */
+    /* Media query for mobile view */
+    @media screen and (max-width: 1265px) {
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end; /* Align text column to the end */
+            margin-bottom: 0px;
+        }
+
+        .row2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start; /* Align text column to the start */
+            margin-bottom: 0px;
+        }
+
+        .image img {
+            max-width: 80vw; /* Set the maximum width of the image to 80% of the viewport width */
+            max-height: 50vh; /* Set the maximum height of the image to 50% of the viewport height */
+            height: auto;
+        }
+
+        /* Additional media query for smaller screens (adjust max-width as needed) */
+        @media screen and (max-width: 820px) {
+            .row {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: flex-end; /* Align elements to the start */
+            }
+
+            .row2 {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: flex-start; /* Align elements to the start */
+            }
+
+            .column.text {
+                text-align: left; /* Align text to the left */
+            }
+        }
+    }
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.menu-open .hamburger {
+    position: fixed; /* Set as fixed when menu is open */
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide any overflow from the SVG */
+}
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Set it to -50% to initially hide it to the right */
+    width: 50%; /* Set the width to 50% of the viewport width */
+    height: 100%;
+    background-color: #000;
+    transition: .5s;
+}
+
+
+.navigation.active {
+    right: 0; /* Slide in from the right when opened */
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 40px;
+    margin: 0;
+    text-align: right;
+    padding-top: 175px; /* Adjust for spacing */
+}
+
+.navigation ul li:hover {
+    color: #33FFA9;
+}
+
+
+.navigation ul li {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.bar {
+    background-color: #000; /* Set to black by default */
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.close-icon {
+    position: fixed;
+    top: 20px; /* Adjust the top position as needed */
+    right: 20px; /* Adjust the right position as needed */
+    z-index: 2;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 80px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+}
+
+/* Uniform transformation for all bars when the hamburger is open */
+.hamburger.open .bar {
+    background-color: #fff; /* Change to white when opened */
+    transform: rotate(45deg); /* Rotate all bars */
+	position: fixed;
+}
+
+/* Adjust the rotation and translation when the menu is open */
+.hamburger.open #bar1 {
+    transform: rotate(-45deg) translate(3px, -1px);
+}
+.hamburger.open #bar2 {
+    opacity: 0;
+}
+.hamburger.open #bar3 {
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    .navigation {
+        width: 100%;
+        right: -100%; /* Initially hidden to the right for smaller screens */
+    }
+
+    .hamburger {
+        right: 10px;
+    }
+}
+
+/* Style the entire menu, including links */
+.navigation ul li {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 0px;
+/*    border: 1px solid #fff;  Add a border around the links on all sides */
+    position: relative;
+}
+
+/* Style the anchor links to make them white */
+.navigation ul li a {
+    color: #fff; /* Make the links white */
+    text-decoration: none; /* Remove underlines from links */
+    padding: 10px 20px; /* Add padding to the links */
+    display: inline-block; /* Make the links behave as blocks with padding */
+}
+
+/* Remove the underlines from links on hover */
+.navigation ul li a:hover {
+    text-decoration: none;
+}
+
+/* Style the "MENU" text */
+.menu-text {
+    position: absolute;
+    top: 0; /* Move the "MENU" text to the top of the menu */
+    left: 10px; /* Adjust the left position as needed */
+    transform: translateY(0); /* Reset the vertical translation */
+    color: #fff;
+    font-weight: bold;
+    padding: 20px; /* Add padding to the "MENU" text */
+	font-size: 50px;
+}
+
+.hamburger {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 2;
+    width: 80px; /* Adjust the width as needed */
+    height: 60px; /* Adjust the height as needed */
+}
+
+/* Add styles for the white strip */
+.strip {
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+}
+
+/* Create a main flex container */
+.main-flex {
+    display: flex;
+    justify-content: space-between; /* Push content to the edges */
+    align-items: center; /* Vertically center the content */
+}
+
+/* Style for the left part of the main flex */
+.left-part {
+    flex: 1; /* Take up available space */
+}
+
+/* Style for the right part of the main flex */
+.right-part {
+    display: flex;
+    align-items: center;
+}
+/* Style the strip text */
+.strip-text {
+    font-size: 18px;
+    color: #000; /* Text color for the strip */
+}
+
+/* Style the "LOG IN" button */
+.login-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+/*    display: flex;  Enable flexbox */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    height: 100%; /* Ensure button fills the strip vertically */
+}
+
+/* Adjust the positioning of the close button */
+.hamburger {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    z-index: 2;
+}
+
+.bar {
+    background-color: #000;
+    width: 45px;
+    height: 6px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.hamburger.open .bar {
+    background-color: #fff;
+}
+
+/* Adjust the positioning of the SVG container */
+.svg-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* Style the element under the strip */
+.under-strip {
+    position: relative;
+    width: 100%;
+    background-color: #fff; /* Background color to match the strip */
+}
+
+/* Style the SVG */
+.under-strip svg {
+    width: 100%;
+    height: auto;
+}
+
+.svg-container svg {
+    width: 100%;
+    height: auto;
+    max-height: 100%; /* Ensure the SVG doesn't exceed its original height */
+}
+
+/* Style the text container */
+.text-container {
+    text-align: center;
+    padding: 20px; /* Add padding around the text */
+}
+
+/* Default styling for the button container */
+.button-container {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style for the "Register" button */
+.button {
+    width: 150px;
+    height: 100%;
+    padding: 10px 20px;
+    background: black;
+    border: 3px black solid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.88px;
+    word-wrap: break-word;
+}
+
+/* Style for the "LEARN MORE" text */
+.learn-more-text {
+    margin-top: 10px; /* Add some margin at the top of the "LEARN MORE" text */
+    color: black;
+    font-size: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    /* Adjust the flex direction to stack buttons vertically */
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Modify button width and padding for smaller screens */
+    .button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Reduce the font size for the "LEARN MORE" text */
+    .learn-more-text {
+        font-size: 12px;
+    }
+}
+
+/* Style for the "LEARN MORE" text */
+.learn-more-text {
+    margin-top: 10px; /* Add some margin at the top of the "LEARN MORE" text */
+    color: black;
+    font-size: 15px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+}
+
+/* Media query for smaller screens (adjust max-width as needed) */
+@media (max-width: 768px) {
+    /* Reduce the margin at smaller screen sizes */
+    .learn-more-text {
+        margin-top: 5px;
+    }
+}
+
+.scrolling-text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50px;
+            background-color: #B7FFEE;
+            color: black;
+            font-size: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+            font-family: 'CustomFont', sans-serif; /* Apply the custom font */
+        }
+
+        .scrolling-text {
+            white-space: nowrap;
+            font-weight: bold;
+            color: black;
+            font-size: 20px;
+        }
+
+.logo-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap columns when the screen is narrow */
+	border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+.columnlogoimg {
+/*    flex: 1; */
+    margin: 10px; /* Adjust the margin as needed for spacing */
+    text-align: center;
+}
+
+.logo-svg {
+    max-width: 100%; /* Adjust the width of the SVG as needed */
+    height: auto;
+}
+
+.timeline-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap columns when the screen is narrow */
+	/* border-top: 2px solid black; */
+    border-bottom: 2px solid black;
+	background-color: #B5FDEC;
+}
+
+.timeline-svg {
+    width: 100px; /* Adjust the width of the SVG as needed */
+    height: auto;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+#pixel-image-sided-end {
+    background-color: #33FFA9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-left,
+.image-right {
+    
+}
+
+.image-left img,
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+#black-end-section {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+h4 {
+    color: black;
+    font-size: 48px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.text-left {
+    text-align: left;
+}
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.image-frame {
+
+}
+	
+.image-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-button {
+    background-color: #ffffff00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    outline: none;
+    min-width: 30px;
+}
+
+.nav-button:hover {
+    background-color: #ffffff00;
+}
+
+.image-container {
+    width: 70%;
+    max-height: 70%;
+    overflow: hidden;
+    border: 0px solid #000;
+    order: 2;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-width: 45px;
+}
+
+.institution {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-under-imageviewer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.text-under-imageviewer h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.custom-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 1000px; /* Ensure the SVG doesn't exceed the width of the container */
+}
+
+.imgviewingplace {
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove borders */
+	background-color: #F0C6FF;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
+}	
+	</style>
 <div class="strip">
     <div class="main-flex">
         <div class="left-part">
-            <h4 style="margin-bottom: 0px; margin-top: 0px;">VIRTUAL CURATING</h4>
+            <h1 style="margin-bottom: 0px; margin-top: 0px;">VIRTUAL CURATING</h1>
         </div>
         <div class="right-part">
             <button class="hamburger" onclick="show()">
@@ -39,7 +772,7 @@
 
     <!-- Add the text under the SVG -->
     <div class="text-container">
-        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 38px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; line-height: 58px; word-wrap: break-word">Exploring women artists from Central and Eastern Europe</div>
+        <h1>Exploring women artists from Central and Eastern Europe</h1>
     </div>
     
     <!-- Add the button below the text -->
@@ -106,23 +839,23 @@
     </div>
 
     <div class="column">
-        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">SEPT/15/2023</div>
-        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">ANNOUNCING THE OPEN CALL</div>
+        <h1>SEPT/15/2023</h1>
+        <h2>ANNOUNCING THE OPEN CALL</h2>
     </div>
 
     <div class="column">
-        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">NOV/15/2023</div>
-        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">DEADLINE FOR SUBMISSIONS</div>
+        <h1>NOV/15/2023</h1>
+        <h2>DEADLINE FOR SUBMISSIONS</h2>
     </div>
 
     <div class="column">
-        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">JAN/15/2024</div>
-        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; text-transform: uppercase; letter-spacing: 1.25px; word-wrap: break-word">notification of selection results</div>
+        <h1>JAN/15/2024</h1>
+        <h2>notification of selection results<h2>
     </div>
 
     <div class="column">
-        <div style="color: black; font-size: 30px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: 1.80px; word-wrap: break-word">FEB-MAR/2024</div>
-        <div style="width: 100%; height: 100%; text-align: center; color: black; font-size: 20px; font-weight: 400; letter-spacing: 1.25px; word-wrap: break-word">ONLINE OPENING AND EVENTS</div>
+        <h1>FEB-MAR/2024</h1>
+        <h2>ONLINE OPENING AND EVENTS</h2>
     </div>
 </div>
 
@@ -170,29 +903,41 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<section class="imgviewingplace">    
+		<div class="text-box">
+            <h1>HOST<br>INSTITUTIONS</h1>
+            <h2>The virtual host institutions offered their digital twin spaces for the applicants to virtually realize their curatorial concepts with the help of Walter’s Cube Editor software. Take a look around and choose the proper venue for your ideas!</h2>
+		</div>
+	<div class="image-frame">
+        <div class="image-viewer">
+            <button id="prev-button" class="nav-button">
+                <img src="https://onlineviewingroom.com/wp-content/uploads/2023/09/left-button-chevron-icon.png" alt="Previous">
+            </button>
+                <div class="custom-svg">
+        <svg viewBox="0 0 1195 652" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="156.5" y="1.5" width="936" height="443" stroke="black" stroke-width="3"/>
+            <rect x="82.5" y="121.5" width="951" height="443" stroke="black" stroke-width="3"/>
+            <path d="M156.5 81.5H1112.5V524.5H156.5V81.5Z" fill="#B7FFEE" stroke="black" stroke-width="3"/>
+            
+            <!-- Dynamic image within the SVG -->
+            <image x="122.5" y="41.5" width="951" height="443" xlink:href="" id="dynamic-image" />
 
-    <div class="image-viewer-section">
-        <div class="text">
-            <div class="title">HOST<br>INSTITUTIONS</div>
-            <div style="width: 50%; color: black; font-size: 22px; font-weight: 400; padding-bottom: 25px; letter-spacing: 1.10px; word-wrap: break-word">The virtual host institutions offered their digital twin spaces for the applicants to virtually realize their curatorial concepts with the help of Walter’s Cube Editor software. Take a look around and choose the proper venue for your ideas!</div>
-        </div>
-        <div class="frame">
-<!----            <img src="./kepkeret.png" alt="Frame" class="frame-image">	---->
-            <div class="image-viewer">
-                <img src="https://onlineviewingroom.com/image-viewer-default-rectangle-12/" alt="Image 1" class="image">
-            </div>
-        </div>
-        <div class="prev-button" onclick="prevImage()">
-            <img src="https://onlineviewingroom.com/left-button-chevron-icon/" alt="Previous">
-        </div>
-        <div class="next-button" onclick="nextImage()">
-            <img src="https://onlineviewingroom.com/right-button-chevron-icon/" alt="Next">
-        </div>
-        <div class="institution">
-            <span style="padding-top: 45px; font-size: 25px; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">MOSTYN<br></span>
-            <span style="padding-top: 10px; font-size: 25px; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">Wales</span>
+            <defs>
+                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_729_1937" transform="matrix(0.00078125 0 0 0.0016711 0 -0.213562)"/>
+                </pattern>
+            </defs>
+        </svg>
+    </div>
+            <button id="next-button" class="nav-button">
+                <img src="https://onlineviewingroom.com/wp-content/uploads/2023/09/right-button-chevron-icon.png" alt="Next">
+            </button>
         </div>
     </div>
+	<div id="image-description" class="institution">
+
+	</div>
+</section>	
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 	
@@ -311,7 +1056,68 @@
 			<li><a href="#">FAQ</a></li>
         </ul>
     </nav>
-    <script src="script.js"></script>
+    <script>
+	// Define the show function globally
+function show() {
+    document.querySelector('.hamburger').classList.toggle('open');
+    document.querySelector('.navigation').classList.toggle('active');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const body = document.querySelector('body');
+    const dynamicImage = document.getElementById('dynamic-image');
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+    const imageDescription = document.getElementById('image-description'); // Added this line
+
+    hamburger.addEventListener('click', function() {
+        body.classList.toggle('menu-open');
+    });
+
+    const images = [
+        'https://onlineviewingroom.com/wp-content/uploads/2023/10/Rectangle-12-1.png',
+        'https://onlineviewingroom.com/wp-content/uploads/2023/10/Rectangle-12-2.png',
+        'https://onlineviewingroom.com/wp-content/uploads/2023/10/Rectangle-12-4.png'
+        // Add more image URLs here
+    ];
+
+    const imageDescriptions = [ // Added an array of descriptions
+        '<div style="width: 100%; height: 100%; text-align: center"><span style="color: black; font-size: 18px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">VILLA MASSIMO<br></span><span style="color: black; font-size: 16px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">Rome</span></div>',
+        '<div style="width: 100%; height: 100%; text-align: center"><span style="color: black; font-size: 18px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">MOSTYN<br></span><span style="color: black; font-size: 16px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">Wales</span></div>',
+        '<div style="width: 100%; height: 100%; text-align: center"><span style="color: black; font-size: 18px; font-family: Space Grotesk; font-weight: 700; letter-spacing: 1.25px; word-wrap: break-word">GLASSYARD GALLERY<br></span><span style="color: black; font-size: 16px; font-family: Space Grotesk; font-weight: 300; letter-spacing: 1.25px; word-wrap: break-word">Budapest</span></div>'
+        // Add more descriptions here corresponding to the images
+    ];
+
+    let currentIndex = 0;
+
+    function updateImage() {
+        dynamicImage.setAttribute('xlink:href', images[currentIndex]);
+        imageDescription.textContent = imageDescriptions[currentIndex]; // Update the text
+        imageDescription.innerHTML = imageDescriptions[currentIndex]; // Use innerHTML
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        updateImage();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        updateImage();
+    });
+
+    // Initialize with the first image and description
+    updateImage();
+});
+
+	</script>
 	
 </body>
 </html>
